@@ -1,0 +1,32 @@
+.timetable-page { max-width: 1280px; margin: 0 auto; padding: 28px; }
+.timetable-header { display:flex; justify-content:space-between; gap:24px; align-items:flex-end; margin-bottom:24px; }
+.timetable-header h1 { margin:4px 0 8px; font-size:clamp(28px,4vw,42px); letter-spacing:-.04em; }
+.timetable-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.35fr); gap:20px; }
+.timetable-card { background:rgba(255,255,255,.96); border:1px solid #e8eaf0; border-radius:22px; padding:22px; box-shadow:0 14px 38px rgba(25,31,45,.06); }
+.timetable-card.full { grid-column:1/-1; }
+.timetable-card-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; }
+.timetable-card h2 { margin:0; font-size:19px; }
+.timetable-card p { color:#697386; }
+.day-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.day-row { display:flex; justify-content:space-between; align-items:center; border:1px solid #edf0f4; border-radius:14px; padding:13px 14px; }
+.day-row strong { display:block; }
+.day-row small { color:#8a93a3; }
+.switch { position:relative; width:44px; height:24px; border:0; border-radius:99px; background:#d9dee7; cursor:pointer; padding:0; }
+.switch.on { background:#111827; }
+.switch span { position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:white; transition:.18s ease; }
+.switch.on span { left:23px; }
+.period-form { display:grid; grid-template-columns:1fr 1.4fr 1fr 1fr; gap:10px; }
+.period-form input,.period-form select { min-width:0; }
+.period-form .wide { grid-column:span 2; }
+.period-form button { grid-column:1/-1; }
+.period-table { width:100%; border-collapse:collapse; }
+.period-table th,.period-table td { text-align:left; padding:13px 10px; border-bottom:1px solid #eef0f4; }
+.period-table th { color:#8a93a3; font-size:12px; text-transform:uppercase; letter-spacing:.06em; }
+.period-table td small { color:#8a93a3; display:block; margin-top:3px; }
+.period-actions { display:flex; gap:8px; justify-content:flex-end; }
+.pill { display:inline-flex; align-items:center; border-radius:999px; padding:5px 9px; font-size:12px; font-weight:700; background:#f0f2f5; }
+.pill.active { background:#e9f7ef; color:#167447; }
+.pill.inactive { background:#f4f4f5; color:#71717a; }
+.error-banner { padding:12px 14px; border-radius:12px; background:#fff1f2; color:#b42318; margin-bottom:16px; }
+@media (max-width: 900px) { .timetable-grid { grid-template-columns:1fr; } .timetable-card.full { grid-column:auto; } .period-form { grid-template-columns:1fr 1fr; } .period-form .wide { grid-column:auto; } }
+@media (max-width: 620px) { .timetable-page { padding:18px; } .day-list { grid-template-columns:1fr; } .period-form { grid-template-columns:1fr; } }

@@ -1,0 +1,353 @@
+.admissions {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 32px;
+}
+.admissions-header {
+  margin-bottom: 24px;
+}
+.admissions-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 420px) 1fr;
+  gap: 20px;
+}
+.admission-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #e4e8ef;
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: 0 12px 40px rgba(16, 24, 40, 0.06);
+}
+.admission-card.wide {
+  min-width: 0;
+}
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+.card-heading h2 {
+  margin: 4px 0 0;
+}
+.count {
+  min-width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #eef2ff;
+  font-weight: 700;
+}
+.compact-form {
+  display: grid;
+  gap: 10px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.compact-form input,
+.compact-form select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #d8dde7;
+  border-radius: 12px;
+  background: #fff;
+}
+.compact-form button,
+.application-actions button {
+  border: 0;
+  border-radius: 12px;
+  padding: 11px 14px;
+  background: #111827;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+.section-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+  margin-top: 8px;
+}
+.application-list {
+  display: grid;
+  gap: 10px;
+}
+.application-item {
+  border: 1px solid #e6e9ef;
+  border-radius: 16px;
+  padding: 16px;
+}
+.application-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+.application-main small {
+  display: block;
+  color: #6b7280;
+  margin-top: 5px;
+}
+.badge {
+  display: inline-flex;
+  padding: 6px 9px;
+  border-radius: 999px;
+  background: #f1f3f5;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+.application-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+.application-actions .secondary {
+  background: #eef2f7;
+  color: #111827;
+}
+.application-actions .danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.success-text {
+  color: #166534;
+}
+.muted {
+  color: #667085;
+}
+@media (max-width: 900px) {
+  .admissions {
+    padding: 20px;
+  }
+  .admissions-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+.application-item.selected {
+  border-color: #a5b4fc;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.08);
+}
+.financial-strip {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+  font-size: 12px;
+}
+.warning-text {
+  color: #92400e;
+}
+.admission-financial-panel {
+  margin-top: 18px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 20px;
+}
+.panel-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.panel-title h3 {
+  margin: 4px 0 0;
+}
+.invoice-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 14px 0;
+}
+.invoice-summary > div {
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8fafc;
+}
+.invoice-summary small,
+.invoice-summary strong {
+  display: block;
+}
+.invoice-summary small {
+  color: #667085;
+  margin-bottom: 4px;
+}
+.invoice-lines,
+.payment-history {
+  display: grid;
+  gap: 7px;
+}
+.invoice-lines > div,
+.payment-history > div,
+.fee-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+.payment-entry {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+.payment-entry input {
+  flex: 1;
+  padding: 11px;
+  border: 1px solid #d8dde7;
+  border-radius: 10px;
+}
+.payment-entry button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #111827;
+  color: #fff;
+  font-weight: 700;
+}
+.payment-entry .secondary {
+  background: #eef2f7;
+  color: #111827;
+}
+.success-box {
+  padding: 14px;
+  border-radius: 12px;
+  background: #ecfdf3;
+  color: #166534;
+}
+.fee-schedule-card {
+  margin-top: 20px;
+}
+.fee-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 28px;
+}
+.fee-row small {
+  display: block;
+  color: #667085;
+  margin-top: 3px;
+}
+.check {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 13px;
+  color: #475467;
+}
+.check input {
+  width: auto;
+}
+.fee-grid .compact-form {
+  align-self: start;
+}
+@media (max-width: 900px) {
+  .invoice-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+  .payment-entry,
+  .fee-grid {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
+
+.admission-metrics {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+.admission-metric {
+  padding: 16px;
+  border: 1px solid var(--border, #e5e7eb);
+  border-radius: 14px;
+  background: var(--card, #fff);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.admission-metric small {
+  color: var(--muted, #64748b);
+}
+.admission-metric strong {
+  font-size: 1.15rem;
+}
+.admission-filters {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 10px;
+  margin: 12px 0 16px;
+}
+.review-box {
+  margin: 14px 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--muted-bg, #f8fafc);
+  border: 1px solid var(--border, #e5e7eb);
+}
+@media (max-width: 1000px) {
+  .admission-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .admission-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .admission-filters {
+    grid-template-columns: 1fr;
+  }
+}
+
+.batch-admission-card {
+  grid-column: 1/-1;
+}
+.batch-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.batch-controls input {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+}
+.batch-result {
+  margin-top: 14px;
+  padding: 13px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+.batch-result ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}
+.batch-admission-card .card-heading {
+  align-items: flex-start;
+}
+.batch-admission-card .card-heading > button {
+  margin-left: auto;
+}
+
+.ffot{
+    margin-left: 30px;
+}
